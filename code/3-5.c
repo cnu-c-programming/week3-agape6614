@@ -8,7 +8,13 @@ void my_sum(char type, int count, ...) {
     if (type == 'S') {
         for (int i = 0; i < count; i++) {
             char* str = va_arg(ap, char*);
-            printf("%s ", str);
+            if(i != count-1){
+                printf("%s ", str);
+            }
+            else{
+                printf("%s", str);
+            }
+            
         }
         printf("\n");
     }
